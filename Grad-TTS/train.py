@@ -31,6 +31,7 @@ batch_size = params.batch_size
 out_size = params.out_size
 learning_rate = params.learning_rate
 random_seed = params.seed
+n_workers = params.n_workers
 
 nsymbols = len(symbols) + 1 if add_blank else len(symbols)
 n_enc_channels = params.n_enc_channels
@@ -70,7 +71,7 @@ if __name__ == "__main__":
     batch_collate = TextMelBatchCollate()
     loader = DataLoader(dataset=train_dataset, batch_size=batch_size,
                         collate_fn=batch_collate, drop_last=True,
-                        num_workers=4, shuffle=False)
+                        num_workers=n_workers, shuffle=False)
     test_dataset = TextMelDataset(valid_filelist_path, cmudict_path, add_blank,
                                   n_fft, n_feats, sample_rate, hop_length,
                                   win_length, f_min, f_max)
