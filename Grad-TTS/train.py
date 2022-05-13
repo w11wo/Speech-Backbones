@@ -56,6 +56,7 @@ beta_min = params.beta_min
 beta_max = params.beta_max
 pe_scale = params.pe_scale
 
+num_workers = params.num_workers
 
 if __name__ == "__main__":
     torch.manual_seed(random_seed)
@@ -71,7 +72,7 @@ if __name__ == "__main__":
     batch_collate = TextMelBatchCollate()
     loader = DataLoader(dataset=train_dataset, batch_size=batch_size,
                         collate_fn=batch_collate, drop_last=True,
-                        num_workers=n_workers, shuffle=False)
+                        num_workers=num_workers, shuffle=False)
     test_dataset = TextMelDataset(valid_filelist_path, cmudict_path, add_blank,
                                   n_fft, n_feats, sample_rate, hop_length,
                                   win_length, f_min, f_max)
