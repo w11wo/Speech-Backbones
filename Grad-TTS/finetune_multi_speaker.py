@@ -57,6 +57,7 @@ beta_min = params.beta_min
 beta_max = params.beta_max
 pe_scale = params.pe_scale
 
+num_workers = params.num_workers
 checkpoint = params.checkpoint
 
 if __name__ == "__main__":
@@ -85,7 +86,7 @@ if __name__ == "__main__":
         batch_size=batch_size,
         collate_fn=batch_collate,
         drop_last=True,
-        num_workers=8,
+        num_workers=num_workers,
         shuffle=True,
     )
     test_dataset = TextMelSpeakerDataset(
