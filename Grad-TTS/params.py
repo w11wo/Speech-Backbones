@@ -51,4 +51,4 @@ learning_rate = 1e-4
 seed = 37
 save_every = 100
 out_size = fix_len_compatibility(2 * 22050 // 256)
-n_workers = 6
+num_workers = 6
