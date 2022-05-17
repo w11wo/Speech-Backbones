@@ -10,13 +10,13 @@ from model.utils import fix_len_compatibility
 
 
 # data parameters
-train_filelist_path = "../../id/train.txt"
-valid_filelist_path = "../../id/valid.txt"
+train_filelist_path = "../../en/train.txt"
+valid_filelist_path = "../../en/valid.txt"
 # test_filelist_path = 'resources/filelists/ljspeech/test.txt'
-cmudict_path = "resources/ipa_dictionary_id"
+cmudict_path = "resources/cmu_dictionary"
 add_blank = True
 n_feats = 80
-n_spks = 2  # 247 for Libri-TTS filelist and 1 for LJSpeech
+n_spks = 3  # 247 for Libri-TTS filelist and 1 for LJSpeech
 spk_emb_dim = 64
 n_feats = 80
 n_fft = 1024
@@ -43,7 +43,7 @@ beta_max = 20.0
 pe_scale = 1000  # 1 for `grad-tts-old.pt` checkpoint
 
 # training parameters
-log_dir = "logs/grad-tts-bookbot-id"
+log_dir = "logs/grad-tts-bookbot-en"
 test_size = 4
 n_epochs = 1000
 batch_size = 16
