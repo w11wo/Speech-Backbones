@@ -10,8 +10,8 @@ from model.utils import fix_len_compatibility
 
 
 # data parameters
-train_filelist_path = "../../id-Weildan-only/train.txt"
-valid_filelist_path = "../../id-Weildan-only/valid.txt"
+train_filelist_path = "../../en/train.txt"
+valid_filelist_path = "../../en/valid.txt"
 # test_filelist_path = 'resources/filelists/ljspeech/test.txt'
 cmudict_path = "resources/cmu_dictionary"
 add_blank = True
@@ -43,7 +43,7 @@ beta_max = 20.0
 pe_scale = 1000  # 1 for `grad-tts-old.pt` checkpoint
 
 # training parameters
-log_dir = "logs/grad-tts-bookbot-ft-id"
+log_dir = "logs/grad-tts-bookbot-ft-en"
 test_size = 4
 n_epochs = 1000
 batch_size = 16
