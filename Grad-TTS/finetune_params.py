@@ -44,7 +44,7 @@ pe_scale = 1000  # 1 for `grad-tts-old.pt` checkpoint
 
 # training parameters
 log_dir = "logs/grad-tts-bookbot-ft-en"
-test_size = 4
+test_size = 2
 n_epochs = 1000
 batch_size = 16
 learning_rate = 1e-5
