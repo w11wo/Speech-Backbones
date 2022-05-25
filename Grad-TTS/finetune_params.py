@@ -45,11 +45,11 @@ pe_scale = 1000  # 1 for `grad-tts-old.pt` checkpoint
 # training parameters
 log_dir = "logs/grad-tts-bookbot-ft-weildan"
 test_size = 4
-n_epochs = 50000
-batch_size = 16
+n_epochs = 24000
+batch_size = 8
 learning_rate = 1e-4
 seed = 37
-save_every = 100
+save_every = 1000
 out_size = fix_len_compatibility(2 * 22050 // 256)
 num_workers = 6
 
